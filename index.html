@@ -111,11 +111,14 @@
     <!-- MENU -->
     <div class="box-menu">
       <div class="main-navbar">
-        <div class="navbar-product-button">
+        <div class="navbar-product-button" id="toggle-menu">
           <div class="text-wrapper-product">DANH MỤC SẢN PHẨM</div>
           <img src="./assets/icon/burger.png" alt="" class="icon-burger" />
         </div>
-        <div class="navbar-wrapper">
+        <div class="menu-toggle">
+          <button class="btn-toggle" id="btn-menu">Menu</button>
+        </div>
+        <div class="navbar-wrapper" id="navbar-menu">
           <div class="navbar-item">Trang chủ</div>
           <div class="navbar-item">Sản phẩm</div>
           <div class="navbar-item">Chào hàng</div>
@@ -130,9 +133,6 @@
     <div class="container-wrapper">
       <div class="main-wrapper">
         <div class="cover-wrapper">
-          <div class="menu-toggle">
-            <button id="toggle-menu" class="btn-toggle">Menu</button>
-          </div>
           <div class="category-product" id="category-menu">
             <div class="category-product-wrapper">
               <p class="category-product-item">
@@ -1401,6 +1401,17 @@
         .getElementById("toggle-menu")
         .addEventListener("click", function () {
           const menu = document.getElementById("category-menu");
+          if (menu.style.display === "block") {
+            menu.style.display = "none"; // Hide the menu
+          } else {
+            menu.style.display = "block"; // Show the menu
+          }
+        });
+
+      document
+        .getElementById("btn-menu")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("navbar-menu");
           if (menu.style.display === "block") {
             menu.style.display = "none"; // Hide the menu
           } else {
