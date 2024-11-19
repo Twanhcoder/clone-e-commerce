@@ -1,3 +1,7 @@
+.new-person {
+  display: flex;
+}
+
 .news-wrapper {
   display: flex;
   justify-content: center;
@@ -54,10 +58,24 @@
   color: #207cea;
   font-size: 16px;
   margin-bottom: 20px;
+  display: -webkit-box; 
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 2; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  line-height: 1.2; 
+  max-height: 2.4em;
 }
 
 .description-content {
   font-weight: 400;
   font-size: 14px;
   color: #6f6b6b;
+  display: -webkit-box; 
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 4; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  line-height: 1.2; 
+  max-height: 84px;
 }
