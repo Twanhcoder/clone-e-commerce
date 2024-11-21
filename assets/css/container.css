@@ -3,8 +3,6 @@
 }
 
 .main-wrapper {
-  width: 85%;
-  margin: 0 auto;
 }
 
 .product-container {
@@ -19,20 +17,27 @@
 
 .product-container-right {
   width: 20%;
-  margin-top: 20px;
+  margin-top: 61px;
 }
 
 .cover-wrapper {
   padding-top: 4px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+}
+
+.wrapper-navbar {
+  width: 100%;
+  position: relative;
 }
 
 .category-product {
-  width: 28%;
-  height: 357px;
+  width: 100%;
+  height: 370px;
   border: 1px solid #c6c6c6;
   border-radius: 11px;
+  position: absolute;
+  top: 67px;
 }
 
 .category-product-wrapper {
@@ -55,18 +60,16 @@
 }
 
 .cover-food {
-  width: 71%;
+  width: 73.5%;
+}
+
+.cover-food img {
+  object-fit: cover;
+  width: 100%;
 }
 
 .product-offer {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
   margin-top: 41.35px;
-}
-
-.product-offer-left {
-  width: 98%;
 }
 
 .header-wrapper {
@@ -91,7 +94,7 @@
 .product-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px 20px;
+  gap: 40px 18px;
   flex: 0 0 auto;
 }
 
@@ -168,12 +171,12 @@
   color: #6f6b6b;
   font-size: 14px;
   margin-bottom: 10px;
-  display: -webkit-box; 
-  -webkit-box-orient: vertical; 
-  -webkit-line-clamp: 4; 
-  overflow: hidden; 
-  text-overflow: ellipsis; 
-  line-height: 1.2; 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
   max-height: 20;
 }
 
@@ -194,8 +197,9 @@
 
 .btn-src {
   display: flex;
-  width: 91%;
+  width: 95%;
   height: 44px;
+  border-radius: 4px;
   align-items: center;
   justify-content: center;
   background-color: var(--s-3s-1);
@@ -204,7 +208,7 @@
 }
 
 .dropdow-select {
-  width: 91%;
+  width: 95%;
   height: 42px;
   display: flex;
   align-items: center;
