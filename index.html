@@ -164,8 +164,8 @@
           </div>
           <div class="col-lg-9 d-flex align-items-center">
             <div class="main-navbar">
-              <div class="menu-toggle">
-                <button class="btn-toggle" id="btn-menu">Menu</button>
+              <div class="menu-toggle" id="btn-menu">
+                <button class="btn-toggle">Menu</button>
               </div>
               <div class="navbar-wrapper" id="navbar-menu">
                 <div class="navbar-item">Trang chủ</div>
@@ -1380,6 +1380,27 @@
             menu.style.display = "block"; // Show the menu
           }
         });
+
+      document.addEventListener("click", function (event) {
+        const categoryMenu = document.getElementById("category-menu");
+        const navbarMenu = document.getElementById("navbar-menu");
+        const toggleMenuButton = document.getElementById("toggle-menu");
+        const btnMenuButton = document.getElementById("btn-menu");
+
+        // Check if the click was outside the menus and buttons
+        if (
+          !categoryMenu.contains(event.target) &&
+          !toggleMenuButton.contains(event.target)
+        ) {
+          categoryMenu.style.display = "none"; // Hide category menu
+        }
+        if (
+          !navbarMenu.contains(event.target) &&
+          !btnMenuButton.contains(event.target)
+        ) {
+          navbarMenu.style.display = "none"; // Hide navbar menu
+        }
+      });
 
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 3,
